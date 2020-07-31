@@ -1,0 +1,329 @@
+body {
+  	font-family: Arial;
+  	color: black; /* darkslateblue */
+  	font-size: 14px;
+  	/*padding: 5px;
+  	margin: 50px; */
+  	//background: rgb(44, 44, 44);
+  		background-image: url("hexagon-tech-wallpaper.jpg");
+	//bkg is blank to right of window when screen is super wide
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	//background-image: url("abstract-tech-wallpaper.jpg");
+	//opacity: 0.3;  affects everything but the image
+	
+}
+/* dynamic content HAD speliing mistake so was showing everyting all the time! */
+.dynamic-content {
+	display:none; 
+}
+
+strong {
+	font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+	font-size: 180%;
+	//font-family: 'ITC Zapf Chancery', cursive;
+	//font-family: chalkduster, fantasy;
+}
+h1 {
+	color: purple; //lightskyblue
+	//font-size: 200%;
+}
+h2 {
+	color: hsl(288, 62%, 25%);
+	font-size: 250%;
+	font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	//font-style: bold;
+	
+}
+
+h3 {
+	color: hsl(288, 62%, 25%);
+	font-size: 140%;
+}
+
+h4 {
+	font-size: 120%;
+	font-style: bold;
+	color: slateblue;
+		
+}
+
+/*how to target only the p under h5? */
+h5 {
+	font-size: 110%;
+	font-style: italic;
+	line-height: 0px;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+
+/*
+project_container > div > h5, p
+div > h5 > p { 
+*/
+
+/* how to target only p under h5?
+.project_container > div  > h5 > p {
+	padding: 0px;
+	margin: 0px;
+	line-height: 0px;
+	color: red;
+	border: red 1px;
+	font-size: 200px;
+}
+*/
+
+p {
+	color: black	; //whitesmoke
+	font-size: 25px;
+	 //#8A2BE2;
+}
+
+section p {
+	color: black;
+	font-size: 16px;
+	line-height: 130%; // 130% = 1.3 ?
+}
+
+/* any other list that is not het  main navigation menu */
+ul li {
+  list-style-type: square;
+  overflow: visible;
+  color: black;
+  font-size: 16px;
+  line-height: 140%;
+  /*color: #0000FF;*/
+}
+
+
+/* NEW STUFF 2July2020 */
+
+section .lightblue {
+	background-color:  hsl(205, 90%, 75%);
+	border: solid red 0px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+
+section .darkblue {
+	background-color:  hsl(205, 70%, 60%); /* rgb(63, 114, 191); */
+	border: solid red 0px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+
+/* NAVIGATOIN MENU 13 May  2020 #menu {} 
+
+how to make menu smaller is viewport is smaller? */
+#menu ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  //background-color:  slateblue;
+  background-color: hsl(288, 62%, 25%);
+  //border: 5px purple solid;
+  //width: 90%;
+}
+
+#menu  li {
+  float: left;
+  list-style-type: none; /* need this here so bullet point doesnt appear in naigation menu */
+  //width: 20%; // thhis makes 5 menu items take up same amoutn of space, but when window is very small, menu words then overlap
+  //overflow: scroll;
+}
+
+#menu  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+  //font-family: Arial, Helvetica, sans-serif; (size was 20px)
+  font-style: italic;
+  font-size: 200%;
+  //width: 20%;
+}
+
+#menu  .active {
+  //background-color: rgb(89, 25, 105);
+  //background-color: slategray;
+  color: white;
+  //border: 2px solid slategray;
+}
+
+/* Change the link color to #111 (black) on hover */
+#menu  li a:hover {
+	 //background-color:  hsl(205, 70%, 75%);
+	background-color: slateblue;
+  	//background-color: purple; //slategray
+}
+
+
+
+
+footer {
+	//margin-top: 150px;
+	background-color: hsl(288, 62%, 25%);
+	//background-color: slateblue;
+	color: white;
+	padding: 5px 5px;
+	//border: 1px black solid; //seems margin doesn take effect unless border has an actual thickness
+}
+
+/* applies to foot p AND a links under footer p only */
+footer p, footer p > a {
+	text-align: center;
+	font-size: 14px;
+	font-style: bold;
+	color: white;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	//margin: 0px 10px;
+	//margin-top: 150px;
+	//padding-top: 15px;
+	//padding-bottom: 15px;
+
+}
+
+/*
+footer p a {
+	text-align: center;
+	font-size: 14px;
+	font-style: bold;
+	//margin-top: 150px;
+	//padding-top: 15px;
+	//padding-bottom: 15px;
+	color: white;
+	
+}
+*/
+
+#container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: lightskyblue ; /* orlightblue */
+	border: blueviolet;
+	/* border-style: dotted; */
+}
+
+/* MEDIA STUFF */
+@media screen and (max-width: 768px) {
+	#container {
+		width: 90%;	
+	}
+	
+	h1 {
+		//font-size: 200%;	
+	}
+	// or mneu stuff here?
+}
+
+//maybe i need one for mobiles ie 200px wide? doenst seem to be working?
+
+
+/* For width 400px and larger: */
+@media only screen and (min-width: 400px) {
+
+  img {
+	max-width: 100%;
+	height:auto;
+	}
+	#portrait_container {
+		max-width: 25%; /* still applied when browser width is smaller, why? */
+	}
+}
+/* For width 400px and smaller: */
+@media only screen and (max-width: 400px) {
+	.project_container {
+		display: block;
+	}
+	/* menu with stuff? not working! */
+	#nav ul li  {
+		width: 20%;
+	}
+	#nav ul li a {
+		font-size: 80%;
+		color: yellow;
+	}
+}
+/* Images in Showcase Portfolio section 14 May  2020 */
+img {
+	width: 100%;
+	max-width: 100%;
+	height:auto;
+}
+
+hr {
+	color: slategray;
+	border: 1px solid;
+	width: 50%;
+}
+/*
+@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+  .img {
+    background-image: url(examples/images/image-768.jpg);
+  }
+}
+*/
+
+.ghub_link {
+	font-size: 90%;
+	color: hsl(30, 100%, 50%);
+	//color: hsl(120, 100%, 20%);
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* CONTAINERS */
+.project_container {
+	margin: auto; /* used t center this div inside itse parent */
+	width: 100%;
+  	display: flex;
+  	flex-wrap: wrap;
+	border: black;
+	/*border-style: solid;*/
+	justify-content: center; /* how to justify container iself */
+}
+
+.project_container > div {
+  flex: 1 1 250px;
+  background-color:  hsl(205, 70%, 75%);
+  //background-color: rgb(113, 168, 202);
+	 border: slateblue 5px solid; 
+	/* was slategray, bkg was lightgray */
+ 
+  /*border-style: double;*/
+  
+  margin: 0px 25px 25px 0px;
+  padding: 10px;
+  box-shadow: 10px 10px 10px lightslategray;
+  //box-shadow: -10px -10px 10px slateblue;
+  //background-color: rgb(163, 195, 253);
+  //background-color: rgb(93, 220, 230);
+  //line-height: 0px;
+}
+
+#portrait_container {
+	width: 50%;
+	/*border-style: dotted;*/
+}
+
+/* 17May20 Slide Animation uising CSS only - bottom padding & height in % doesnt seem to be doing anyting. plus how to reduce/remove the fading. plus bottom of pics are getting cut off when browser is middle-sized - from https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascript-required */
+.fling-minislide {width:100%; height:150px; padding-bottom: 50%; overflow:hidden; position:relative; }
+/*.fling-minislide {width:350px; height:300px; overflow:hidden; position:relative; } */
+.fling-minislide img{ position:absolute; animation:fling-minislide 20s infinite; opacity:0; width: 100%; height: auto;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}}
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:5s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:15s;}

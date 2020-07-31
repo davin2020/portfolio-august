@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+    	<!--
+		<title id="title-davin" class="dynamic-content">Davin's Portfolio Website</title>
+		<title id="default-content-title" class="dynamic-content">Patricia's Portfolio Website</title>
+		-->
+    	<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+  	<body>
+		<!--<script src="script.js"></script> -->
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+		<!-- Seems u cant put JS in head section! Also cant use this script to dynamically change the tab's title
+			I haven't learned JS yet, so currently using this code to dynamically adjust my name & email address based on the input url "?dc=davin"
+		Credit for this code taken from -
+		https://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
+		-->
+	
+		<script type="text/javascript">	
+			// Parse the URL parameter
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			// Give the parameter a variable name
+			var dynamicContent = getParameterByName('dc');
+			
+			$(document).ready(function() {
+				// Check if the URL parameter dc is davin
+				if (dynamicContent == 'davin'| dynamicContent == 'dj') {
+					//$('#greeting-name').show();
+					//$('#email-name').show();
+					$('#name-davin').show();
+					$('#email-davin').show();
+					$('#copyright-davin').show();
+					$('#title-davin').show();
+					document.title = "Davin's Portfolio Website";
+				} 
+				// Check if the URL parameter is patricia
+				else if (dynamicContent == 'patricia') {
+					//could setup other options here but went with defaults instead
+					//$('#default-content').show();
+					$('#default-content-name').show();
+					$('#default-content-email').show();
+					$('#default-content-copyright').show();
+					$('#default-content-title').show();
+					document.title = "Patricia's Portfolio Website";
+				} 
+				// Check if the URL parmeter is empty or not defined, display default content ie Patricia
+				else {
+					//$('#default-content').show();
+					$('#default-content-name').show();
+					$('#default-content-email').show();
+					$('#default-content-copyright').show();
+					$('#default-content-title').show();
+					document.title = "Portfolio Website";
+				}
+			});
+		</script>
+
+		<!-- container section for responsive design -->
+		<section class="container">
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html">About</a></li>
+					<li><a href="#Skills">Skills</a></li>
+					<li><a href="#Portfolio">Portfolio</a></li>
+					<li><a href="#Contact">Contact</a></li>
+					<li><a href="#Resources">Resources</a></li>
+				</ul>
+			</nav>
+
+			<section class="darkblue">
+				<!-- this H1 is being shown  smaller due to being nested within section, hence starting Hs at H2 as that tag is not affected -->
+				<a name="About"><h2>About Me</h2></a>
+				<p>Hi, my name is 
+					<strong id="default-content-name" class="dynamic-content">Patricia</strong>
+					<strong id="name-davin" class="dynamic-content">Davin</strong></p>
+
+				<!--
+				<p>Value of url variable dc: </p>
+				<script type="text/javascript">	
+				document.write(dynamicContent);
+				</script>
+				-->
+				<p>I'm an IT Professional with over 12 years industry experience across 2 countries.</p>
+
+				<p>I've been living in the UK since covid lockdown started in March 2020. Previously I was living & working in New Zealand since 2007, mostly doing IT support in a corporate environment.</p>
+
+				<p>I'm currently enrolled in a 4 month full-stack web development bootcamp, which starts in September 2020 and is run by Mayden Academy in Bath.</p>
+
+				<p>During lockdown I have been trying to learn various web technologies online, in preparation for the bootcamp. I have also been researching & learning about topics like gamification & human needs, to assist me with designing & developing an idea for a mobile app.</p>
+
+				<p>As well as IT I'm also interested in -</p>
+				<ul>
+					<li>Making short films</li>
+					<li>Psychology</li>
+					<li>Travelling</li>
+					<li>Science fiction</li>
+				</ul>
+			</section>
+
+			
+
+			<section class="lightblue">
+				<a name="Skills"><h2>Skills</h2></a>
+				<p>Skills I'm currently in the process of learning online -</p>
+				<ul>
+					<li>Javascript</li>
+					<li>PHP</li>
+					<li>Git & GitHub</li>
+					<li>Ruby</li>
+				</ul>
+				<p>See the <a href="#Resources">Resources</a> section for useful links to online learning resources that I've been using</p>
+
+				<p>Skills I've gained while working in the IT Industy in NZ & UK</p>
+				<ul>
+					<li>Programming & Web Development</li>
+						<ul>
+							<li>Enough HTML & CSS and responsive design to make this website, although I'm still learning & trying to improve it</li>
+							<li>Powershell scripting to manipulate Active Directory users & groups and Exchange mailboxes</li>
+							<li>OOP concepts in Java, also algorithms & data structures</li>
+							<li>Basic SQL</li>
+							<li>Java, JSP & JDBC (from early 2000's) - back then I created an internal company website to allow 600+ users to register for a biannual conference</li>
+						</ul>
+					<li>Support (Service Delivery)</li>
+						<ul>
+							<li>ServiceNow, Ivanti/HEAT, VMWare, LANDesk, JIRA</li>
+							<li>Windows 10, 7, XP and Server 2008</li>
+							<li>Supporting corporate endusers in a windows environment</li>
+							<li>Providing remote and onsite field support</li>
+							<li>MS Office 2016 & O365 & 2013</li>
+							<li>Active Directory, Exchange (hybrid OnPrem & cloud), Azure AD licensing, SCCM, InTune, SharePoint, Skype for Business</li>
+							<li>SAP user admin</li>
+							<li>Moodle Learning Management System</li>
+							<li>Kaseya VSA - ITSM software used to manage other computers</li>
+						</ul>
+				</ul>
+				<p>I also have a Computer Science degree, that's integrated with IBM UK. This means that while employed by IBM for 3 years, I spent 2 day a week attending uni lectures & the remaining 3 days per week & any uni holiday time working on business projects at IBM.</p>
+
+			</section>
+ 
+			<section class="darkblue">
+				<a name="Portfolio"><h2>Portfolio</h2></a>
+				<div class="project_container"> <!-- container for responsive design for projects -->
+
+				<div><h3>Recent Websites</h3>
+					<h4>Portfolio Website</h4>
+					<img src="images/screenshot_portfolio_website_html.PNG" alt="Screenshot of Hickey Law website" width="200">
+					<em class="ghub_link">Github link coming soon</em>
+					<p>I created this website about myself and my coding journey</p>
+					<hr>
+					<h4>Other Websites</h4>
+					<p>Coming soon...</p>
+				</div>
+				<div><h3>Legacy Websites</h3>
+					<h4>Hickey Law</h4> 
+					<img src="images/HickeyLaw_screenshot.jpg" alt="Screenshot of Hickey Law website" width="200">	
+					<!-- URL for site code is https://davin2020.github.io/legacy-hickey-law/ however Javascript image fade is not currently working while hosted on github -->
+					<em class="ghub_link">Github link coming soon</em>
+					<p>In 2012, while I was living in NZ, a graphic artist friend of mine designed a website for his client. I asked if I could create the website as practise, so he sent me the Photoshop files. I used the files to create a demo website using my existing knowledge of HTML and teaching myself CSS along the way.</p>
+					<hr>
+					
+					<h4>Film Websites</h4>
+					<p>In 2013 I made 3 static websites for another friend who makes short films in NZ and was also running a film trust at that time. However the websites are no longer live</p>
+					
+					<!--
+					<h5>Gene Pool</h5>
+					<p>A static website to promote/advertise a fan fiction indie film he was creating by combining Doctor Who and Stargate. No longer live, as replaced with a Facebook Page</p>
+					<h5>Nightshade Films</h5>
+					<p>A static website to promote his indie film production company. No longer live</p>
+					<h5>Belladonna Film Trust</h5>
+					<p>A static website to promote his film trust in Christchurch. No longer live.</p>
+					<hr>
+					-->
+
+					<h4>Prism Consulting</h4>
+					<p>In 2014 I created a website for another friend who is a transport consultant in NZ. However the site never went live</p>
+				
+
+					<!-- Template
+					<h4>Demo Website - Test2</h4>
+					<p>xx. </p>
+					<hr>
+					-->
+				</div>
+				<div>
+					<h3>PowerShell Scripts</h3>
+					<h4>Active Directory & Exchange</h4> 
+					<img src="images\CreatePublicFolder_PowerShell_screenshot.jpg" alt="Screenshot of PowerShell Script">
+					<p>Back in 2016-17, while doing Windows support in a corporate ennvironment using Active Directory (AD) & Exchange mail server, I discovered that Powershell could be used to create scripts for reptitive tasks. So I taught myself enough Powershell to write scripts for creating public folders and shared mailboxes. About a year later I rewrote (refactored) the shared mailbox script, as I had improved my knowledge & understanding of Powershell</p>
+					<p>Then the company we were supporting had a bit of a restructure and my manager had to move a lot of user objects into differnt departments units under different managers. This also meant that he had to transfer ownership of security groups from one manager to another. He was doing all this extra admin work in his evenings, so I created a few scripts to help him do this more quickly & easily. </p>
+					<p>Some of the longer scripts I created were:
+						<em class="ghub_link">GitHub links coming soon</em></p>
+					<ul>
+						<li>Create Publc Folder in Exchange</li>
+						<li>Export AD Groups Managed by User X</li>
+						<li>Find & Change AD Groups Managed by User X</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="lightblue">
+				<a name="Contact"><h2>Contact</h2></a>
+				<p>You can reach me via -</p>
+				<p id="default-content-email" class="dynamic-content">📧 Email: patricia.hayden.0@gmail.com</p>
+				<p id="email-davin" class="dynamic-content">📧 Email: davin.hayden@outlook.com</p>
+
+				<p>&nbsp;📱 Mobile UK: +44 7714 166 884</p>
+				<p>📲 Mobile NZ: +64 211 682 747 (via WhatsApp only since  I'm in the UK)</p>
+			</section>
+
+			<section class="darkblue">
+				<a name="Resources"><h2>Resources</h2></a>
+				<p>Here are a few resources that I have discovered and used to learn about web development -</p>
+				<ul>
+					<li><a href="https://www.codecademy.com">Codecademy</a> - courses in HTML, CSS, JavaScript, PHP etc</li>
+					<li><a href="https://www.internetingishard.com/">Internetting is Hard</a> - tutorials about HTML & CSS</li>
+					<li><a href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a> - especially the 'Responsive Web Design Certification' section with its Project sub-sections</li>
+					<li><a href="https://sqlzoo.net/">SQL Zoo</a> Online tutorial about learning SQL</li>
+					<li><a href="https://www.db-fiddle.com/">DB Fiddle</a> An online Database sandbox</li>
+					<li>Free webinars about web dev topics via Eventbrite - just search for a topic and use the Filters for Price & Date eg <a href="https://www.eventbrite.com/d/online/free--events--this-week/git/?page=1&lang=en">Free Git events this week</a>. FYI its an international site so you may need to convert between time zones</li>
+					<li>Free introductory workshop webinars via <a href="https://www.lewagon.com/events">Le Wagon</a></li>
+					<li><a href="https://github.com/rainsworth/intro-to-github">Intro to GitHub</a> by Dr R Ainsworth. GitHub is cloud hosting for files/projects that are version controlled and can be worked on by multiple people</li>
+					<li><a href="https://www.youtube.com/playlist?list=PLZe5VjNb0Tr5jvVtsCSSgfMsDa6Tpj8Db">Intro to Git Version Control</a> by A Skoulikari. Git is version control software that runs locally on your computer</li>
+					
+					<!-- Template for glossery links
+					<li><a href="">Anchor</a>Text</li>
+					<li>Text<a href="">Anchor</a></li>
+					-->
+				</ul>
+
+				<p>Here are some resources that I have created - coming soon</p>
+				<ul>
+					<li>Glossery of <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Web Frameworks<a> & Languages - coming soon - I'm going to bring together a list of various framworks and what language they apply to, in table format. I might also include a list of sofware</li>
+				</ul>
+			</section>
+
+			<!-- Section Template
+			<section class="darkblue">
+				<a name="About"><h2>Section X</h2></a>
+				<p>Lorum ipsum</p>
+			</section>
+			-->
+
+			<footer>
+
+				<p>
+					<a href="index.html">about</a> |
+					<a href="#Skills">skills</a> |
+					<a href="#Portfolio">portfolio</a> |
+					<a href="#Contact">contact</a> |
+					<a href="#Resources">resources</a> 
+					<!--
+					| <a href="change_log.html">change log</a>
+					-->
+				<p>
+				<!-- update footer with more sections once they have been created & have content
+				<p>about | skills | portfolio | websites | powershell | exercises |  contact | resources | changelog<p>
+				-->
+				<p id="default-content-copyright" class="dynamic-content">Copyright Patricia Hayden 2020</p>
+				<p id="copyright-davin" class="dynamic-content">Copyright Davin Hayden 2020</p>
+
+				
+			</footer>
+
+		</section> <!-- end of container section -->
+
+  	</body>
+</html>
