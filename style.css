@@ -119,14 +119,25 @@ h5 {
 	margin-bottom: 0px;
 }
 
-/* Text for link to github content thats Coming Soon */
+/* Text for link to github content thats available now, with green background */
 .ghub_link {
 	font-size: 90%;
-	color: hsl(30, 100%, 50%); // orange
-	//color: hsl(120, 100%, 20%); // green
+	background-color: hsl(120, 60%, 20%);
+	color: white;
 	font-style: italic;
-	margin: 0px;
+	margin: 2px;
 	padding: 0px;
+	text-decoration: none;
+}
+
+/* Text for link to github content thats Coming Soon, with orange text */
+.ghub_link_soon {
+	font-size: 90%;
+	color: hsl(30, 100%, 50%); 
+	font-style: italic;
+	margin: 2px;
+	padding: 0px;
+	text-decoration: none;
 }
 
 /* Images in project portfolio sections */
