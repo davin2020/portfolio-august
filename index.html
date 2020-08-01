@@ -4,9 +4,8 @@
 		
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width">
-    	<!--
-		<title id="title-davin" class="dynamic-content">Davin's Portfolio Website</title>
-		<title id="default-content-title" class="dynamic-content">Patricia's Portfolio Website</title>
+    	<!-- Title is set dynamically via JS below
+		<title id="title-davin">Davin's Portfolio Website</title>
 		-->
     	<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
@@ -15,9 +14,8 @@
 		<!--<script src="script.js"></script> -->
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
-		<!-- Seems u cant put JS in head section! Also cant use this script to dynamically change the tab's title
-			I haven't learned JS yet, so currently using this code to dynamically adjust my name & email address based on the input url "?dc=davin"
-		Credit for this code taken from -
+		<!-- I haven't learned enough JS yet, so currently using this code to dynamically adjust my name, email address, copyright info & tab title based on the input url  eg "?dc=davin"
+		Credit for this JS code is due to -
 		https://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
 		-->
 	
@@ -36,10 +34,8 @@
 			var dynamicContent = getParameterByName('dc');
 			
 			$(document).ready(function() {
-				// Check if the URL parameter dc is davin
+				// Check if the URL parameter dc is davint or dj
 				if (dynamicContent == 'davin'| dynamicContent == 'dj') {
-					//$('#greeting-name').show();
-					//$('#email-name').show();
 					$('#name-davin').show();
 					$('#email-davin').show();
 					$('#copyright-davin').show();
@@ -49,7 +45,6 @@
 				// Check if the URL parameter is patricia
 				else if (dynamicContent == 'patricia') {
 					//could setup other options here but went with defaults instead
-					//$('#default-content').show();
 					$('#default-content-name').show();
 					$('#default-content-email').show();
 					$('#default-content-copyright').show();
@@ -58,7 +53,6 @@
 				} 
 				// Check if the URL parmeter is empty or not defined, display default content ie Patricia
 				else {
-					//$('#default-content').show();
 					$('#default-content-name').show();
 					$('#default-content-email').show();
 					$('#default-content-copyright').show();
